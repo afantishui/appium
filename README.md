@@ -25,5 +25,5 @@
 *     -sceneImg  截图目录
 
 * -Runtest
-*     -adb_start  使用adb命令启动应用，进行图像识别操作（识别一个图像完整耗时约16s）
-*     -appium_start  使用appium启动应用，进行图像识别操作（识别一个图像完整耗时约50s）
+*     -adb_start.py  使用adb命令启动应用，进行图像识别操作（识别一个图像完整耗时约16s）
+*     -appium_start.py  使用appium启动应用，进行图像识别操作（识别一个图像完整耗时约50s）
