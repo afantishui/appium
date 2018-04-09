@@ -1,0 +1,25 @@
+testinfo:
+    - id: test001
+      title: 1
+      info: 1
+testcase:
+    - element_info:  text='aa'
+      find_type: xpath
+      operate_type: click
+      info: a
+    - element_info: 1
+      find_type: xpath
+      operate_type: set_value
+      msg: lll824144294
+      info: a
+    - element_info: 1
+      find_type: xpath
+      operate_type: set_value
+      msg: ljh824144294
+      info: a
+
+check:
+    - element_info: 1
+      find_type: xpath
+      operate_type: toast # 提示框
+      info: 1
