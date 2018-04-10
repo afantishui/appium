@@ -6,6 +6,12 @@ from Base.imgProcess import *
 from Base.monkeyBase import AndroidBaseOperation
 base = AndroidBaseOperation()
 
+def getYaml(path):
+    with open(path,encoding='utf-8') as f:
+        x = yaml.load(f)
+        print(x)
+
+
 def conf_Init(config):
     # 读取配置
     filepath = open(r'..\config\%s'%(config), encoding='utf-8')
@@ -15,7 +21,7 @@ def conf_Init(config):
     #print(imgpath)
     queryImgPath = imgpath + '\\img\\queryImg\\'
     sceneFilePath = imgpath + '\\img\\sceneImg\\bg.png'
-    print(queryImgPath,sceneFilePath)
+    #print(queryImgPath,sceneFilePath)
     return f_config,queryImgPath,sceneFilePath
 
 # 判断是否存在图片
@@ -24,9 +30,10 @@ def exist_pic(queryImgPath,pic,sceneFilePath):
         base.get_screenshot(sceneFilePath)
         # 获取控件坐标
         x,y = getImgCordinate(os.path.join(queryImgPath,pic),sceneFilePath)
+        print(x,y)
         if x is not None:
-            return x,y
-            # print('%s is exist'%pic)
+            print('%s is exist'%pic)
+            return x,y            
             break
         else:
             print('finding...')
@@ -35,4 +42,12 @@ def exist_pic(queryImgPath,pic,sceneFilePath):
 def find_click(queryImgPath,pic,sceneFilePath,time):
     x,y = exist_pic(queryImgPath,pic,sceneFilePath)
     base.click(x,y,time)
-f_config, queryImgPath, sceneFilePath = conf_Init('config.yml')
+    print('click %s，%s,wait %s s'%(x,y,time))
+
+def game_start(activity):
+    base.start_activity(activity)
+
+def game_quit(apk_name):
+    base.stop_app(apk_name)
+
+    

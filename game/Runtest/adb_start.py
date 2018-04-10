@@ -10,21 +10,20 @@ from Base.monkeyBase import AndroidBaseOperation
 f_config, queryImgPath, sceneFilePath = conf_Init('config.yml')
 base = AndroidBaseOperation() # 实例化
 
-base.start_activity(f_config['activity']) # 启动游戏
-time.sleep(3)
+game_start(f_config['activity']) # 启动游戏
+time.sleep(4)
 base.click(100,100,1)  # 跳过动画
 base.click(100,100,1)
 base.click(100,100,1)
 time.sleep(3)
 
-mid_cordinate_x,mid_cordinate_y = getImgCordinate(os.path.join(queryImgPath,'login_button.png'),sceneFilePath)
-print(mid_cordinate_x,mid_cordinate_y)
-# 点击坐标
-base.click(mid_cordinate_x,mid_cordinate_y,1)
-time.sleep(1)
-print('ok')
+find_click(queryImgPath,'login_button.png',sceneFilePath,3) # 进入游戏点击按钮
+find_click(queryImgPath,'enter_game.png',sceneFilePath,6)	# # 进入游戏点击按钮
+find_click(queryImgPath,'open_map.png',sceneFilePath,3)		# 打开左上角小地图入口
+find_click(queryImgPath,'npc_tufu.png',sceneFilePath,3)		# 在地图找屠夫
+exist_pic(queryImgPath,'exist_tufu.png',sceneFilePath)		# 在对话框是否匹配到
 
-'''
-if f_config['loginType'] == 'WX':
-    find_click(queryImgPath, f_config['loginButton'], sceneFilePath, 0.5)
-'''
+print('ok')
+time.sleep(3)
+game_quit(f_config['packageName'])
+

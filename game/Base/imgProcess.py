@@ -28,11 +28,11 @@ def getImgCordinate(filePath,sceneFilePath):
 		print('unknown feature:%s'%feature_name)
 		sys.exit(1)
 
-	print('using akaze')
+	print(u'正在计算特征值...')
 	# 计算特征值
 	kp1,desc1 = detector.detectAndCompute(img1,None)
 	kp2,desc2 = detector.detectAndCompute(img2,None)
-	print('matching...')
+	print(u'正在进行特征值匹配...')
 	# 特征值匹配
 	raw_matches = matcher.knnMatch(desc1,trainDescriptors = desc2, k = 2)
 	p1,p2,kp_pairs = filter_matches(kp1, kp2, raw_matches)

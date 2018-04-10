@@ -426,8 +426,6 @@ class AndroidBaseOperation(object):
 	def get_screenshot(self,path):
 		# 获取截图 auto.png
 		# 把截图保存路径设成可配置
-		#imgpath = os.path.abspath('..')
-		#path = imgpath + '\\img\\sceneImg\\auto.png'
 		process = subprocess.Popen('adb shell screencap -p', shell = True, stdout = subprocess.PIPE)
 		screenshot = process.stdout.read()
 		# 图片二进制转码

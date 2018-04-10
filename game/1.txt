@@ -1,0 +1,58 @@
+adb shell am start -n com.game37.bayechuanqi/com.game37.bayechuanqi.AppActivity
+start --com.game37.bayechuanqi/com.game37.bayechuanqi.AppActivity
+screenshot --- ok
+109/109 inliers/matched
+964 856
+login_button.png is exist
+screenshot --- ok
+82/82 inliers/matched
+1624 964
+enter_game.png is exist
+screenshot --- ok
+71/71 inliers/matched
+1806 60
+open_map.png is exist
+screenshot --- ok
+8/8 inliers/matched
+1316 684
+npc_tufu.png is exist
+screenshot --- ok
+13/13 inliers/matched
+1532 258
+exist_tufu.png is exist
+ok
+adb shell am force-stop com.game37.bayechuanqi
+stop --- com.game37.bayechuanqi
+[Finished in 58.7s]
+
+
+
+screenshot --- ok
+..\Base\Init.py:30: ResourceWarning: unclosed file <_io.BufferedReader name=3>
+  base.get_screenshot(sceneFilePath)
+109/109 inliers/matched
+964 856
+login_button.png is exist
+screenshot --- ok
+83/83 inliers/matched
+1624 964
+enter_game.png is exist
+screenshot --- ok
+73/73 inliers/matched
+1806 61
+open_map.png is exist
+screenshot --- ok
+7/7 inliers/matched
+1316 684
+npc_tufu.png is exist
+screenshot --- ok
+14/14 inliers/matched
+1532 258
+exist_tufu.png is exist
+ok
+.
+----------------------------------------------------------------------
+Ran 1 test in 71.056s
+
+OK
+[Finished in 71.8s]
