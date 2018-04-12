@@ -1,7 +1,7 @@
 ## 2018.4.12
 * 使用yaml进行用例配置
 * 操作类型暂时分成两种点击（click）跟检查（check），其他后面再加入
-*testcase:
+* testcase:
 *     query_img: 匹配图片名称
 *     operate_type: click 操作类型 
 *     time: 3 延时等待 
