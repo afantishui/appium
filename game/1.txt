@@ -56,3 +56,18 @@ Ran 1 test in 71.056s
 
 OK
 [Finished in 71.8s]
+
+{'testinfo': [{'id': 'test020', 'title': 1, 'pre_info': 1}], 'testcase': [{'info': 1, 'time': 3, 'operate_type': 'click', 'query_img': 'com.huawei.works.knowledge:id/vtb_img_right'}]}
+[Finished in 0.4s]
+
+'''
+		# 获取屏幕截图
+		sceneFilePath = base.get_screenshot(sceneImgPath)
+		# 获取控件坐标
+		mid_cordinate_x,mid_cordinate_y = getImgCordinate(os.path.join(queryImgPath,'login_button.png'),sceneImgPath)
+		print(mid_cordinate_x,mid_cordinate_y)
+		# 点击坐标
+		base.click(mid_cordinate_x,mid_cordinate_y,1)
+		time.sleep(1)
+		print('ok')
+'''

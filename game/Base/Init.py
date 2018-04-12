@@ -7,9 +7,10 @@ from Base.monkeyBase import AndroidBaseOperation
 base = AndroidBaseOperation()
 
 def getYaml(path):
-    with open(path,encoding='utf-8') as f:
+    with open('..\config\%s'%(path),encoding='utf-8') as f:
         x = yaml.load(f)
-        print(x)
+    #print(x)
+    return x
 
 
 def conf_Init(config):
@@ -49,5 +50,3 @@ def game_start(activity):
 
 def game_quit(apk_name):
     base.stop_app(apk_name)
-
-    

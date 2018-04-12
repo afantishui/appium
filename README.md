@@ -6,10 +6,6 @@
 * appium环境
 * OpenCV
 
-## 使用
-* 把每步操作截图放入img\qrerImg目录
-* 在执行代码里调用 find_click(queryImgPath,'login_button.png',sceneFilePath,3)，修改第二个参数改成操作截图名字，第四个参数是操作后延时，单位s
-* 判读图片是否存在调用 exist_pic(queryImgPath,'exist_tufu.png',sceneFilePath)，返回的是一个坐标
 
 ## 目录结构
 #### demo

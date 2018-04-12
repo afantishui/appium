@@ -1,0 +1,29 @@
+testinfo:
+    - id: test01
+      title: 1
+      pre_info: 1
+testcase:
+#    - query_img: com.huawei.works.knowledge:id/marquee_view
+#      operate_type: click 
+#      time: 3 延时等待 
+#      info: 查找点击登录按钮
+    - query_img: login_button.png
+      operate_type: click
+      time: 3
+      info: click login_button.png
+    - query_img: enter_game.png
+      operate_type: click
+      time: 6
+      info: click enter_game.png
+    - query_img: open_map.png
+      operate_type: click
+      time: 3
+      info: click open_map.png
+    - query_img: npc_tufu.png
+      operate_type: click
+      time: 3
+      info: click npc_tufu.png
+    - query_img: exist_tufu.png
+      operate_type: check
+      time: 3
+      info: check exist_tufu.png

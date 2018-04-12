@@ -1,8 +1,0 @@
-# 需查询匹配图片路径
-queryImgPath: D:\GitHub\appium\game\img\queryImg
-# 截图路径
-sceneFilePath: D:\GitHub\appium\game\img\sceneImg\img\sceneImg\auto.png
-# pic
-pic: login_button.png
-# 延时
-time: 1 

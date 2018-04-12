@@ -47,11 +47,12 @@ class GameOpencvTests(unittest.TestCase):
 		base.click(100,100,1)
 		base.click(100,100,1)
 		time.sleep(3)
-		find_click(queryImgPath,'login_button.png',sceneFilePath,3) 
-		find_click(queryImgPath,'enter_game.png',sceneFilePath,6)
-		find_click(queryImgPath,'open_map.png',sceneFilePath,3)
-		find_click(queryImgPath,'npc_tufu.png',sceneFilePath,3)
-		exist_pic(queryImgPath,'exist_tufu.png',sceneFilePath)
+		case = getYaml('login.yaml')
+		for item in case['testcase']:
+			if item['operate_type'] == 'click':
+				find_click(queryImgPath,item['query_img'],sceneFilePath,int(item['time']))
+			if item['operate_type'] == 'check':
+				exist_pic(queryImgPath,item['query_img'],sceneFilePath)
 		print('ok')
 		# 测试结束清理
 	def tearDown(self):
@@ -63,14 +64,3 @@ if __name__ == '__main__':
 	unittest.main()
 
 
-'''
-		# 获取屏幕截图
-		sceneFilePath = base.get_screenshot(sceneImgPath)
-		# 获取控件坐标
-		mid_cordinate_x,mid_cordinate_y = getImgCordinate(os.path.join(queryImgPath,'login_button.png'),sceneImgPath)
-		print(mid_cordinate_x,mid_cordinate_y)
-		# 点击坐标
-		base.click(mid_cordinate_x,mid_cordinate_y,1)
-		time.sleep(1)
-		print('ok')
-'''

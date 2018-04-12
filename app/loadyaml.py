@@ -7,7 +7,8 @@ import yaml
 def getYaml(path):
 	with open(path,encoding='utf-8') as f:
 		x = yaml.load(f)
-		print(x)
+	print(x)
+	return x
 
 # yaml里有中文时不能打印
-getYaml('login.yaml')
+getYaml('..\game\config\login.yaml')
