@@ -1,15 +1,11 @@
 ## 2018.4.12
 * 使用yaml进行用例配置
 * 操作类型暂时分成两种点击（click）跟检查（check），其他后面再加入
-testcase:
-#    - query_img: 匹配图片名称
-#      operate_type: click 操作类型 
-#      time: 3 延时等待 
-#      info: 查找点击登录按钮
-    - query_img: login_button.png
-      operate_type: click
-      time: 3
-      info: click login_button.png
+* testcase:
+*     query_img: 匹配图片名称
+*     operate_type: click 操作类型 
+*     time: 3 延时等待 
+*     info: 查找点击登录按钮
 
 ## 2018.4.10
 
