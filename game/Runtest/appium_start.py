@@ -47,7 +47,7 @@ class GameOpencvTests(unittest.TestCase):
 		base.click(100,100,1)
 		base.click(100,100,1)
 		time.sleep(3)
-		case = getYaml('login.yaml')
+		case = getYaml('findNPC.yaml')
 		for item in case['testcase']:
 			if item['operate_type'] == 'click':
 				find_click(queryImgPath,item['query_img'],sceneFilePath,int(item['time']))

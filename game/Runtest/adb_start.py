@@ -16,12 +16,14 @@ base.click(100,100,1)  # 跳过动画
 base.click(100,100,1)
 base.click(100,100,1)
 time.sleep(3)
-case = getYaml('login.yaml')
+# 用例执行
+case = getYaml('findNPC.yaml')
 for item in case['testcase']:
 	if item['operate_type'] == 'click':
 		find_click(queryImgPath,item['query_img'],sceneFilePath,int(item['time']))
 	if item['operate_type'] == 'check':
 		exist_pic(queryImgPath,item['query_img'],sceneFilePath)
+
 '''
 find_click(queryImgPath,'login_button.png',sceneFilePath,3) # 进入游戏点击按钮
 find_click(queryImgPath,'enter_game.png',sceneFilePath,6)	# # 进入游戏点击按钮
